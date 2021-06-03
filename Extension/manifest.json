@@ -1,0 +1,12 @@
+{
+  "name": "Gitmoji Extension",
+  "version": "1.0",
+  "description": "Easily search and copy gitmojis 🚀",
+  "permissions": ["activeTab", "storage"],
+  "browser_action": {
+    "default_title": "Gitmoji Extension",
+    "default_icon": "popup-icon.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
