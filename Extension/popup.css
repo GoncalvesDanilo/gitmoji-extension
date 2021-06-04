@@ -110,3 +110,16 @@ img {
   background: #bababa;
   border-radius: 5px;
 }
+
+footer p {
+  margin: 0;
+  text-align: center;
+  color: #bababa;
+  padding: 3px;
+  font-size: 11px;
+}
+
+footer a {
+  color: #bababa;
+  text-decoration: none;
+}
