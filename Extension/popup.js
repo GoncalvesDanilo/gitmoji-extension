@@ -1,19 +1,21 @@
-let content = document.getElementById('list');
+let emojiList = document.getElementById('list');
 
 const copy = (className) => {
   const emojiName = className.split(' ')[1];
-  const emoji = gitmojis.find(emoji => emoji.name === emojiName).emoji;
-  navigator.clipboard.writeText(emoji)
-  .then(() => {
-    console.log('Copied!');
-  })
-  .catch((error) => {
-    alert(error);
-  });
+  const emoji = gitmojis.find((emoji) => emoji.name === emojiName).emoji;
+  navigator.clipboard
+    .writeText(emoji)
+    .then(() => {
+      console.log('Copied!');
+    })
+    .catch((error) => {
+      alert(error);
+    });
 };
 
 gitmojis.forEach((gitmoji) => {
-  let item = document.createElement('div');
+  let item = document.createElement('li');
+  item.id = gitmoji.name;
   item.className = 'list-item ' + gitmoji.name;
   item.setAttribute('style', `--item-color:${gitmoji.color}`);
   item.addEventListener('click', (click) => copy(click.target.className));
@@ -37,5 +39,21 @@ gitmojis.forEach((gitmoji) => {
   description.innerText = gitmoji.description;
   textWrap.appendChild(description);
 
-  content.appendChild(item);
+  emojiList.appendChild(item);
 });
+
+const search = () => {
+  const input = document.getElementById('searchbar').value.toLowerCase();
+  const emojis = document.getElementsByClassName('list-item');
+  console.log(emojis);
+  for (let emoji of emojis) {
+    console.log(emoji.id);
+    if (!emoji.id.includes(input)) {
+      emoji.style.display = 'none';
+    } else {
+      emoji.style.display = 'flex';
+    }
+  }
+};
+
+document.getElementById('searchbar').addEventListener('keyup', search);
