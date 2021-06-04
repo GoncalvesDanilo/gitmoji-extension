@@ -41,15 +41,6 @@ img {
   padding: 0 2px;
 }
 
-@keyframes animation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
 .gitmojis-list {
   max-height: 100%;
   overflow-y: auto;
