@@ -8,5 +8,18 @@
     "default_icon": "popup-icon.png",
     "default_popup": "popup.html"
   },
+  "icons": {
+    "16": "popup-icon.png",
+    "48": "popup-icon.png",
+    "128": "popup-icon.png"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Shift+Alt+G"
+      },
+      "description": "Open the gitmoji popup"
+    }
+  },
   "manifest_version": 2
 }

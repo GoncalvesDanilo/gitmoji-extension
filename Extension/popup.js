@@ -1,15 +1,22 @@
 let emojiList = document.getElementById('list');
+document.getElementById('searchbar').focus();
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 const copy = (className) => {
   const emojiName = className.split(' ')[1];
   const emoji = gitmojis.find((emoji) => emoji.name === emojiName).emoji;
   navigator.clipboard
     .writeText(emoji)
-    .then(() => {
-      console.log('Copied!');
+    .then(async() => {
+      document.getElementById('image').src = './verifica.svg';
+      await sleep(1000);
+      document.getElementById('image').src = './popup-icon.png';
     })
     .catch((error) => {
-      alert(error);
+      console.error(error);
     });
 };
 
@@ -44,16 +51,16 @@ gitmojis.forEach((gitmoji) => {
 
 const search = () => {
   const input = document.getElementById('searchbar').value.toLowerCase();
-  const emojis = document.getElementsByClassName('list-item');
-  console.log(emojis);
-  for (let emoji of emojis) {
-    console.log(emoji.id);
-    if (!emoji.id.includes(input)) {
+  const emojis = [...document.getElementsByClassName('list-item')];
+  emojis.forEach((emoji) => {
+    const description = emoji.children[1].children[1].innerText.toLowerCase();
+    console.log('description', description);
+    if (!emoji.id.includes(input) && !description.includes(input.toLowerCase())) {
       emoji.style.display = 'none';
     } else {
       emoji.style.display = 'flex';
     }
-  }
+  });
 };
 
 document.getElementById('searchbar').addEventListener('keyup', search);
