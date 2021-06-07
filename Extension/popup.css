@@ -115,12 +115,12 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: none;
+  background: rgba(73, 73, 73, 0.048);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #bababa;
-  border-radius: 5px;
+  background: #494949;
+  border-radius: 2px;
 }
 
 footer p {
