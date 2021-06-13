@@ -11,9 +11,9 @@ const copy = (className) => {
   navigator.clipboard
     .writeText(emoji)
     .then(async() => {
-      document.getElementById('image').src = './verifica.svg';
+      document.getElementById('image').src = './assets/verifica.svg';
       await sleep(1000);
-      document.getElementById('image').src = './popup-icon.png';
+      document.getElementById('image').src = './assets/popup-icon.png';
     })
     .catch((error) => {
       console.error(error);

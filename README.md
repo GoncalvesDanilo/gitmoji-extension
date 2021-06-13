@@ -3,7 +3,7 @@
 Chrome extension to easily **search** and **copy** gitmojis.
 
 <p align="center">
-  <img src="./Extension/extension-printscreen.png" style="height: 300px;">
+  <img src="./Extension/assets/extension-printscreen.png" style="height: 300px;">
 </p>
 
 ### 📦️ Installation

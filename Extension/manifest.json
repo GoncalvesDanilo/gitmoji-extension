@@ -5,13 +5,13 @@
   "permissions": ["activeTab", "storage"],
   "browser_action": {
     "default_title": "Gitmoji Extension",
-    "default_icon": "popup-icon.png",
+    "default_icon": "./assets/popup-icon.png",
     "default_popup": "popup.html"
   },
   "icons": {
-    "16": "popup-icon.png",
-    "48": "popup-icon.png",
-    "128": "popup-icon.png"
+    "16": "./assets/popup-icon16.png",
+    "48": "./assets/popup-icon48.png",
+    "128": "./assets/popup-icon128.png"
   },
   "commands": {
     "_execute_browser_action": {
