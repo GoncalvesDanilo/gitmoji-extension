@@ -1,6 +1,6 @@
 ## 🚀 Gitmoji Browser Extension
 
-Chrome extension to easily **search** and **copy** gitmojis.
+Chrome and Firefox extension to easily **search** and **copy** gitmojis.
 
 <p align="center">
   <img src="./Extension/assets/extension-printscreen.png" style="height: 300px;">
