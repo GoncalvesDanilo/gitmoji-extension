@@ -1,8 +1,12 @@
 let emojiList = document.getElementById('list');
 document.getElementById('searchbar').focus();
 
+if (navigator.userAgent.indexOf('Firefox') != -1) {
+  document.getElementById('popup-content').setAttribute('style', 'height:73%');
+}
+
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 const copy = (className) => {
@@ -10,7 +14,7 @@ const copy = (className) => {
   const emoji = gitmojis.find((emoji) => emoji.name === emojiName).emoji;
   navigator.clipboard
     .writeText(emoji)
-    .then(async() => {
+    .then(async () => {
       document.getElementById('image').src = './assets/verifica.svg';
       await sleep(1000);
       document.getElementById('image').src = './assets/popup-icon.png';
@@ -54,7 +58,6 @@ const search = () => {
   const emojis = [...document.getElementsByClassName('list-item')];
   emojis.forEach((emoji) => {
     const description = emoji.children[1].children[1].innerText.toLowerCase();
-    console.log('description', description);
     if (!emoji.id.includes(input) && !description.includes(input.toLowerCase())) {
       emoji.style.display = 'none';
     } else {
