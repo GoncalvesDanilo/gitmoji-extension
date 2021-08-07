@@ -6,7 +6,15 @@ Chrome and Firefox extension to easily **search** and **copy** gitmojis.
   <img src="./Extension/assets/extension-printscreen.png" style="height: 300px;">
 </p>
 
-### 📦️ Installation
+## 📦️ Installation
+
+### **Firefox**
+
+Available on Firefox Browser Addons.
+
+[Click here](https://addons.mozilla.org/pt-BR/firefox/addon/gitmoji-extension/) to install the addon.
+
+### **Chrome**
 
 Extension not yet available on Chrome Web Store.
 
@@ -25,7 +33,7 @@ However, it can be installed following the steps below:
 4. Click on `Load Unpacked`
 
 5. Select the folder `Extension` of the cloned repository
-### ✨ Usage
+## ✨ Usage
 
 - Shortcut: `Shift+Alt+G`
 - Searching accepts both **name** and **description** of Gitmojis.
